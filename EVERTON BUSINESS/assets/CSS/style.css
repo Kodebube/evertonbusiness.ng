@@ -1,0 +1,252 @@
+/* custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Exo+2&display=swap');
+
+:root {
+    --bs-danger: #DC3545;
+    --bs-primary: #0d6efd;
+    --bs-white: #ffffff;
+    --bs-black: #000000;
+    --bs-secondary: #dcdcdc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* navbar */
+#navbar {
+    min-width: 100vh;
+}
+
+.navbar-brand {
+    position: relative;
+    top: -4px;
+}
+
+#navbar h1 {
+    font-family: 'Comfortaa', sans-serif !important;
+}
+
+.nav-item .active {
+    color: var(--bs-primary) !important;
+    font-weight: bold;
+}
+
+.dropdown-menu .active {
+    color: var(--bs-white) !important;
+}
+
+.nav-item a:hover {
+    color: var(--bs-primary) !important;
+    transition: .3s ease all;
+}
+
+.offcanvas {
+    max-width: 85%;
+}
+
+.nav-active {
+    box-shadow: 0 0 20px 0 var(--bs-black);
+    background-color: var(--bs-white);
+    transition: .7s ease all;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    border: none;
+    border-top: 2px solid var(--bs-primary);
+    border-radius: 0;
+}
+
+.dropdown-item {
+    margin-top: 5px;
+}
+
+.dropdown-item:hover {
+    scale: 1.1;
+    transition: .8s;
+}
+
+/* top */
+#top .row {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#top .col-lg-6 img {
+    position: absolute;
+    width: 80%;
+    right: -200px;
+    top: 0;
+    overflow: hidden !important;
+}
+
+#top a {
+    box-shadow: 0 0 8px 0 var(--bs-primary);
+}
+
+#top a:hover {
+    box-shadow: 0 0 20px 0 var(--bs-primary);
+    transform: translate3d(0, -.300rem, 0);
+    transition: .5s ease-out;
+}
+
+/* join */
+#join .container-fluid {
+    background-color: var(--bs-secondary);
+}
+
+#join .col-lg-3 i {
+    font-size: 43px;
+    padding-top: 20px;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+}
+
+#join .card1,
+#join .card1 i {
+    background-color: red;
+}
+
+#join .card2,
+#join .card2 i {
+    background-color: orange;
+}
+
+#join .card3,
+#join .card3 i {
+    background-color: cadetblue;
+}
+
+#join .card {
+    box-shadow: 0 0 20px 0 var(--bs-white);
+}
+
+#join .card:hover {
+    box-shadow: 0 0 20px 0 var(--bs-primary);
+    transition: .7s ease;
+}
+
+/* briefs */
+#briefs .container-fluid {
+    background-color: rgb(79, 107, 160);
+    text-align: center;
+}
+
+#briefs h4 {
+    color: red;
+}
+
+/* testimonials */
+#testimonials .container-fluid {
+    background: url('/assets/img/business\ bg3.jpeg');
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#testimonials h2 {
+    font-family: cursive;
+    font-weight: 100;
+}
+
+/* footer */
+
+/* about page */
+.card-img-overlay {
+    height: 15%;
+    top: 260px;
+    position: absolute;
+    display: none;
+    overflow: hidden;
+}
+
+@keyframes bop {
+    0% {
+        top: 300px;
+        display: none;
+        z-index: -10;
+    }
+
+    100% {
+        top: 260px;
+    }
+}
+
+/* ffx page */
+#ffx {
+    background: url('/assets/img/bg.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#team .card:hover .card-img-overlay {
+    animation-name: bop;
+    animation-duration: .4s;
+    display: block;
+}
+
+/* contact page */
+#contact {
+    background: url(/assets/img/contact-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+
+#hasto {
+    animation: welc;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-delay: 2s;
+}
+
+@keyframes welc {
+    0% {
+        margin-top: 100px;
+    }
+
+    50% {
+        margin-top: 0px;
+    }
+}
+
+/* privacy page */
+#privacy {
+    background: url(/assets/img/icon-remove.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#privacy main p, #privacy main ul {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 991px) {
+
+    #top .col-lg-6 img {
+        position: relative;
+        width: auto;
+        right: auto;
+        top: auto;
+    }
+
+    .navbar-nav {
+        display: none;
+    }
+
+    #join .card {
+        box-shadow: none;
+    }
+}
